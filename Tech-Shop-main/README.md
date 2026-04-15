@@ -1,95 +1,126 @@
-> Tech Shop built with the MERN stack & Redux - By Team 6
-> 
-> Standard Naming Conventions are Used , so you can take help of A.I. tools like ChatGpt , Gemini e.t.c to understand and enhance the product.
+#  Tech Shop Backend (MERN)
 
-## Features
+A backend-driven e-commerce system built using the MERN stack (MongoDB, Express, Node.js) with additional integrations like AI APIs and payment gateways.
 
-- Full featured shopping cart
-- Product reviews and ratings  (Edit and Delete Reviews)
-- Top products carousel
-- Product pagination
-- Product search feature
-- User profile with orders and Delete account feature
-- Admin product management (Create ,Edit , Delete)
-- Admin user management (Edit, Admin Status and Delete)
-- Admin Order details page
-- Mark orders as delivered option
-- Checkout process (shipping,Select Address, payment method, etc)
-- PayPal / credit card integration
-- Database seeder (products & users)
-- User Wishlist Products (Add,Delete)
-- User Addresses (Add , edit , delete)
-- AI Integration (can Chat with two models - Gemini and Groq)
-- API with postman testing code 
 
-## Usage
 
-### ES Modules in Node
+##  Features
 
-We use ECMAScript Modules in the backend in this project. Be sure to have at least Node v14.6+ or you will need to add the "--experimental-modules" flag.
+###  User Functionality
 
-Also, when importing a file (not a package), be sure to add .js at the end or you will get a "module not found" error
-You can also install and setup Babel if you would like
+* User authentication (JWT-based)
+* User profile management
+* Order history tracking
+* Wishlist management (Add / Remove products)
+* Address management (Add / Edit / Delete)
 
-### Env Variables
 
-Create a .env file in then root and add the following
+
+###  Product & Order Management
+
+* Product listing with search & pagination
+* Product reviews and ratings (Add / Edit / Delete)
+* Shopping cart & checkout flow
+* Order creation and tracking
+
+
+
+###  Admin Features
+
+* Product management (Create / Update / Delete)
+* User management (Update roles / Delete users)
+* Order management (View details, mark as delivered)
+
+
+
+###  Integrations
+
+* PayPal / Credit Card payment integration
+* AI chatbot integration (Gemini & Groq APIs)
+
+
+
+###  Backend Highlights
+
+* RESTful API design
+* Layered architecture (Routes → Controllers → Models)
+* MongoDB for data persistence
+* API testing using Postman
+
+
+
+##  Tech Stack
+
+* Node.js
+* Express.js
+* MongoDB
+* JWT Authentication
+* REST APIs
+* Postman
+
+
+
+##  Setup & Installation
+
+### 1. Clone the repository
 
 ```
-NODE_ENV = development
-PORT = 5000
-MONGO_URI = "your mongodb uri"
-JWT_SECRET = 'abc123'
-PAYPAL_CLIENT_ID = "your paypal client id"
-API_KEY="Your Gemini Api Key"
-GROQ_API_KEY="Your Groq APi Key"
+git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
+cd REPO_NAME
 ```
-Note: If you don't add your paypal id , project will still work but the payment feature won't.
 
-### Install Dependencies (frontend & backend)
+---
+
+### 2. Install dependencies
 
 ```
 npm install
-cd frontend
-npm install
 ```
 
-### Run
+---
+
+### 3. Configure environment variables
+
+Create a `.env` file in root:
 
 ```
-# Run frontend (:3000) & backend (:5000)
-npm run dev
+NODE_ENV=development
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret
+PAYPAL_CLIENT_ID=your_paypal_id
+API_KEY=your_gemini_key
+GROQ_API_KEY=your_groq_key
+```
 
-# Run backend only
+---
+
+### 4. Run the backend
+
+```
 npm run server
 ```
 
-## Build & Deploy
+---
+
+##  Database Seeder
 
 ```
-# Create frontend prod build
-cd frontend
-npm run build
-```
-
-### Seed  Database
-You can use the following commands to seed the database with some sample users and products as well as destroy all data
-
-```
-# Import data
+# Import sample data
 npm run data:import
 
 # Destroy data
 npm run data:destroy
 ```
 
-```
-Sample User Logins
+---
 
-admin@example.com (Admin)
-123456
+##  API Testing
 
-yogendra@example.com (Customer)
-123456
-```
+* All APIs tested using Postman
+* Includes endpoints for users, products, orders, and authentication
+
+
+
+
 
